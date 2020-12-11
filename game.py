@@ -1,11 +1,11 @@
 from tic_tac_toe import TicTacToe
 
 PLAYER_ONE_SYMBOL = "X"
-PLAYER_TWO_SYMBOL = "O"
+BOT_SYMBOL = "O"
 
 def main():
   try:
-    game = TicTacToe()
+    game = TicTacToe(BOT_SYMBOL)
     while True:
       game.printBoard()
       
@@ -23,22 +23,18 @@ def main():
         print("It's a draw")
         break
       
-      # Prompt Player Two to play the move
-      print('Player Two')
-      pos = game.choosePosition()
-      game.playMove(pos, PLAYER_TWO_SYMBOL)
-
+      game.botMove()
       game.printBoard()
 
-      if game.isWon(PLAYER_TWO_SYMBOL):
+      if game.isWon(BOT_SYMBOL):
         print('Player Two - Won the game')
         break
       elif game.isFinished():
         print("It's a draw")
         break
   except Exception as e:
-    print(e)
-
+    print("Something went wrong.")
+    print("Error: ", e)
 
 if __name__=='__main__':
   main()

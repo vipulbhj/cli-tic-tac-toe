@@ -1,5 +1,6 @@
 class TicTacToe():
-  def __init__(self):
+  def __init__(self, botSymbol):
+    self.botSymbol = botSymbol
     self.board = ["#" for _ in range(9)]
 
 
@@ -93,4 +94,29 @@ class TicTacToe():
   def isFinished(self):
     return "#" not in self.board
 
-  
+  def botMove(self):
+    currentBoardState = [x for x in self.board]
+    pos = self.calcBotMove(self.botSymbol)
+    self.board = currentBoardState
+    self.playMove(pos, self.botSymbol)
+    
+
+  def calcBotMove(self, playerSymbol):
+    availableBoardIdxs = [idx for idx in range(9) if self.board[idx] == "#"]
+    for idx in availableBoardIdxs:
+      self.playMove(idx, playerSymbol)
+      self.printBoard()
+      if playerSymbol == "X" and self.isWon(playerSymbol):
+        pass
+      elif playerSymbol == "O" and self.isWon(playerSymbol):
+        return idx
+      elif self.isFinished():
+        pass
+      else:
+        playerSymbol = "X" if playerSymbol == "O" else "O"
+        if self.calcBotMove(playerSymbol):
+          return idx
+        else:
+          pass
+      self.board[idx] = "#"
+    return False
