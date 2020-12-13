@@ -1,7 +1,7 @@
 # TicTacToe Two Player
 A two player command line TicTacToe game where player take turns. When prompted to choose the position you wanna play at, enter the number based on the game board standard explained below.
 
-__A single player / against computer version can be found in the [here](https://vipulbhj.tech)__
+__A single player / against computer version can be found in the [here](https://github.com/vipulbhj/cli-tic-tac-toe/tree/play-against-bot)__
 
 ## Board and Positions
 
