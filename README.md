@@ -1,6 +1,7 @@
-# TicTacToe Part A
-
+# TicTacToe Two Player
 A two player command line TicTacToe game where player take turns. When prompted to choose the position you wanna play at, enter the number based on the game board standard explained below.
+
+__A single player / against computer version can be found in the [here](https://vipulbhj.tech)__
 
 ## Board and Positions
 
@@ -28,6 +29,8 @@ _created and tested for python version 3.5_
 
 ## How to run tests
 
-Tests are written as `txt` files which will be the input to the program. To run a test simple execute `python3 game.py < test_file_name.txt`.
+Tests are written as `txt` files which will be the input to the program.
+
+To run a test simple execute `python3 game.py < test_file_name.txt`.
 
 For example `python3 game.py < tests/player_two_win_invalid_values.txt`
