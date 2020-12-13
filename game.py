@@ -9,7 +9,7 @@ def main():
     while True:
       game.printBoard()
       
-      # Prompt Player 1 to take turn.
+      # Prompt Player One to play the move.
       print('Player One')
       pos = game.choosePosition()
       game.playMove(pos, PLAYER_ONE_SYMBOL)
@@ -22,13 +22,14 @@ def main():
       elif game.isFinished():
         print("It's a draw")
         break
-
-      game.printBoard()
       
       # Prompt Player Two to play the move
       print('Player Two')
       pos = game.choosePosition()
       game.playMove(pos, PLAYER_TWO_SYMBOL)
+
+      game.printBoard()
+
       if game.isWon(PLAYER_TWO_SYMBOL):
         print('Player Two - Won the game')
         break
