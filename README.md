@@ -2,7 +2,7 @@
 
 A command line TicTacToe game where you player against a computer player and moves are made by taking turns. When prompted to choose the position they wanna play at, enter the number based on the game board standard explained below.
 
- __A two player version can be found in the [here](https://github.com/vipulbhj/tree/master)__
+ __A two player version can be found in the [here](https://github.com/vipulbhj/cli-tic-tac-toe)__
 
 ## Board and Positions
 
